@@ -1,16 +1,17 @@
-# budget_manager
+# budget_manager_app
 
 A new Flutter project.
 
-## Getting Started
+## Main Concept: 월간 목표액을 정해 매일 사용가능액수/사용액수를 추적
 
-This project is a starting point for a Flutter application.
+- A: 해당 월 사용가능액
+- B: 일일 지급액 = A / 해당 월의 일수
+- C: 일일 사용액 = 당일의 (소비항목.금액)의 합
+- D: 일일 잔액 = B - C
+- 누적 현황: E = D의 합
 
-A few resources to get you started if this is your first Flutter project:
+### 화면: 일일
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### 화면: 월간
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 화면: 설정
