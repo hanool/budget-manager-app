@@ -28,6 +28,13 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
 
+  # Database.
+  hive: ^1.4.4+1
+
+  # Google's Chart Library.
+  # Maybe change it to 'graphic' library in future.
+  charts_flutter: ^0.9.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
