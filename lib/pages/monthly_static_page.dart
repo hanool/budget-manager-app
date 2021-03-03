@@ -1,4 +1,4 @@
-/// Line chart example
+import 'package:budget_manager_app/models/daily_budgets_model.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
@@ -26,30 +26,27 @@ class PointsLineChart extends StatelessWidget {
   }
 
   /// Create one series with sample hard coded data.
-  static List<charts.Series<LinearSales, int>> _createSampleData() {
+  static List<charts.Series<DailyBudgets, int>> _createSampleData() {
     final data = [
-      new LinearSales(0, 5),
-      new LinearSales(1, 25),
-      new LinearSales(2, 100),
-      new LinearSales(3, 75),
+      new DailyBudgets(1, 25),
+      new DailyBudgets(2, 100),
+      new DailyBudgets(3, 75),
+      new DailyBudgets(4, 88),
+      new DailyBudgets(5, 126),
+      new DailyBudgets(6, 97),
+      new DailyBudgets(7, 240),
+      new DailyBudgets(8, 10),
+      new DailyBudgets(9, 5),
     ];
 
     return [
-      new charts.Series<LinearSales, int>(
-        id: 'Sales',
+      new charts.Series<DailyBudgets, int>(
+        id: 'Budgets',
         colorFn: (_, __) => charts.MaterialPalette.blue.shadeDefault,
-        domainFn: (LinearSales sales, _) => sales.year,
-        measureFn: (LinearSales sales, _) => sales.sales,
+        domainFn: (DailyBudgets budgets, _) => budgets.day,
+        measureFn: (DailyBudgets budgets, _) => budgets.budgets,
         data: data,
       )
     ];
   }
-}
-
-/// Sample linear data type.
-class LinearSales {
-  final int year;
-  final int sales;
-
-  LinearSales(this.year, this.sales);
 }

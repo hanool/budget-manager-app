@@ -7,7 +7,16 @@ void main() {
 
 class AppHome extends StatelessWidget {
   @override
-  Widget build(context) {
-    return PointsLineChart.withSampleData();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('graph'),
+        ),
+        body: Center(
+          child: PointsLineChart.withSampleData(),
+        ),
+      ),
+    );
   } 
 }
