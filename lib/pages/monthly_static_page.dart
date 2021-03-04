@@ -20,9 +20,12 @@ class PointsLineChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new charts.LineChart(seriesList,
+    return new charts.LineChart(
+        seriesList,
+        
         animate: animate,
-        defaultRenderer: new charts.LineRendererConfig(includePoints: true));
+        defaultRenderer: new charts.LineRendererConfig(includePoints: true)
+      );
   }
 
   /// Create one series with sample hard coded data.
@@ -42,7 +45,7 @@ class PointsLineChart extends StatelessWidget {
     return [
       new charts.Series<DailyBudgets, int>(
         id: 'Budgets',
-        colorFn: (_, __) => charts.MaterialPalette.blue.shadeDefault,
+        colorFn: (_, __) => charts.MaterialPalette.black,
         domainFn: (DailyBudgets budgets, _) => budgets.day,
         measureFn: (DailyBudgets budgets, _) => budgets.budgets,
         data: data,

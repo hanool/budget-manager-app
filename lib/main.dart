@@ -11,14 +11,28 @@ class AppHome extends StatelessWidget {
     return MaterialApp(
       home: SafeArea(
         child: Scaffold(
-          appBar: AppBar(
-            title: Text('graph'),
+              appBar: AppBar(
+                title: Text('graph'),
+              ),
+              body:Column(
+                children: <Widget>[
+                  Container(
+                    color: Colors.white,
+                    height: 200,
+                  ),
+                  Expanded(
+                    child: Center(
+                      child: PointsLineChart.withSampleData(),
+                    ),
+                  ),
+                  Container(
+                    color: Colors.white,
+                    height: 100,
+                  ),
+                ]
+              ),
           ),
-          body: Center(
-            child: PointsLineChart.withSampleData(),
-          ),
-        ),
-      ),  
+      ), 
     );
   } 
 }
