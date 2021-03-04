@@ -12,7 +12,7 @@ class AppHome extends StatelessWidget {
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-          title: Text('graph'),
+            title: Text('graph'),
           ),
           body: Center(
             child: PointsLineChart.withSampleData(),
