@@ -9,14 +9,16 @@ class AppHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
           title: Text('graph'),
+          ),
+          body: Center(
+            child: PointsLineChart.withSampleData(),
+          ),
         ),
-        body: Center(
-          child: PointsLineChart.withSampleData(),
-        ),
-      ),
+      ),  
     );
   } 
 }
